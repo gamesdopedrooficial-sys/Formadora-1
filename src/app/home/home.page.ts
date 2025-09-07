@@ -12,5 +12,5 @@ import { RouterModule } from '@angular/router';
 })
 export class HomePage {
   nome: string = "Pedro Henrique";
-  codigoTurma: string = "ADS2025";
+  codigoTurma: string = "ADS0301M";
 }
