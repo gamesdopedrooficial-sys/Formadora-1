@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de API</title>
+</head>
+<body>
+  <h1>Piada Aleatória 🤣</h1>
+  <button onclick="getJoke()">Mostrar Piada</button>
+  <p id="setup"></p>
+  <p id="punchline" style="font-weight: bold;"></p>
+
+  <script>
+    async function getJoke() {
+      // Chama a API de piadas
+      const response = await fetch("https://official-joke-api.appspot.com/random_joke");
+      const data = await response.json();
+
+      // Mostra o resultado na página
+      document.getElementById("setup").innerText = data.setup;
+      document.getElementById("punchline").innerText = data.punchline;
+    }
+  </script>
+</body>
+</html>

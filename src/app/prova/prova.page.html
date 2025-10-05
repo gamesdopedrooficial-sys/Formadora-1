@@ -8,7 +8,15 @@
   <h2>Sobre mim</h2>
   <p>{{ descricao }}</p>
 
+  <ion-button (click)="getJoke()" expand="block" color="tertiary">
+    Mostrar Piada
+  </ion-button>
+
+  <p>{{ jokeSetup }}</p>
+  <p style="font-weight: bold;">{{ jokePunchline }}</p>
+
   <ion-button routerLink="/" expand="block" color="primary">
     Voltar
   </ion-button>
 </ion-content>
+
